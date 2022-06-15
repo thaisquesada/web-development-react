@@ -21,9 +21,9 @@ const Counter = () => {
 
   return (
     <Container>
-      <Titulo>Counter</Titulo>
-      {/* PROP: Parametros dos componentes React */}
-      {error && (<ErrorMessage>Não é possível acrescentar</ErrorMessage>)}
+      <Title>Counter</Title>
+      {/* PROP: são os parametros dos componentes REACT */}
+      {error && (<ErrorMessage>10 is the maximum number!</ErrorMessage>)}
       <Button onClick={() => changeValue()}>Increase</Button>
       <Button onClick={() => resetCounter()}>Reset</Button>
       <Text value={number} />

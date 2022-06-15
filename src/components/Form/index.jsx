@@ -25,7 +25,7 @@ function Form() {
         <input
           value={name}
           onChange={(e) => changeName(e)}
-          placeholder="Your name: "
+          placeholder="Name: "
         />
         {name}
       </InputWrapper>

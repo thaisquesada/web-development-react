@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Title = styled.h3`
   font-size: 20px;
   font-family: sans-serif;
-  color: violet;
+  color: #836FFF;
 `;
 
 export const Button = styled.button`
