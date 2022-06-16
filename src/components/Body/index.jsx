@@ -1,8 +1,8 @@
 import Counter from "../Counter";
 import Form from "../Form";
 import List from "../List";
-import ProductList from "../../ProductList";
-import Product from "../../Product";
+import ProductList from "../ProductList";
+import Product from "../Product";
 
 function Body() {
   const products = [

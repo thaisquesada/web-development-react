@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const ProductWrapper = styled.div`
   width: 200px;
-  background-color: #bab3b3;
+  background-color: #91a6fe;
 `;
 
 const ProductImage = styled.img`
@@ -11,7 +11,7 @@ const ProductImage = styled.img`
 `;
 
 const Text = styled.div`
-  color: #7bd473;
+  color: #fff;
   text-align: center;
   font-size: 24px;
 `;

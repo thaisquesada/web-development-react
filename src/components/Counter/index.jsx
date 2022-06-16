@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { Container } from "../../Styles";
-import { Button, Title, ErrorMessage } from "./Styles";
+import { Button, Title, ErrorMessage, ResetButton } from "./Styles";
 
 const Counter = () => {
   const [number, setNumber] = useState(1);
   const [error, setError] = useState(false);
 
   const changeValue = () => {
-    if (number > 10) {
+    if (number >= 10) {
       setError(true);
     } 
 
@@ -25,7 +25,13 @@ const Counter = () => {
       {/* PROP: são os parametros dos componentes REACT */}
       {error && (<ErrorMessage>10 is the maximum number!</ErrorMessage>)}
       <Button onClick={() => changeValue()}>Increase</Button>
-      <Button onClick={() => resetCounter()}>Reset</Button>
+      <ResetButton
+        onClick={() => resetCounter()}
+        variant="contained"
+        disabled={number === 0}
+      >
+        Reset
+      </ResetButton>
       <Text value={number} />
     </Container>
   );

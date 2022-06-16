@@ -1,23 +1,31 @@
 import styled from "styled-components";
 
 export const Title = styled.h3`
-  font-size: 20px;
+  font-size: 30px;
   font-family: sans-serif;
-  color: #836FFF;
+  color: #525252;
 `;
 
 export const Button = styled.button`
-  background-color: #4e034e;
+  background-color: #91a6fe;
   color: #fff;
-  border: 1px solid #ae66ae;
+  border: 1px solid #91a6fe;
   padding: 7px;
   margin-right: 10px;
   border-radius: 5px;
   &:hover {
-    background-color: #780778;
+    background-color: #617ef4;
   }
 `;
 
 export const ErrorMessage = styled.p`
-  color: red;
+  color: #fa6fef;
+`;
+
+export const ResetButton = styled(Button)`
+  && {
+    width: 73px;
+    height: 31px;
+    margin-right: 10px;
+  }
 `;

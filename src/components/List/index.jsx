@@ -1,6 +1,6 @@
 import List from './FatherList';
 import ItemList from './ItemList';
 
-Item.List = ItemList;
+List.Item = ItemList;
 
 export default List;
