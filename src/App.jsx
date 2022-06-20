@@ -4,10 +4,24 @@ import SerraStorage from "./pages/SerraStorage";
 import Students from "./pages/Students";
 import { SubjectRegister } from "./pages/SubjectRegister";
 import { SubjectList } from "./pages/SubjectList";
+import Navbar from "./components/Navbar"
+import { ThemeContext } from "./context";
+import { useContext } from "react";
 
 function App() {
+  const { selectedTheme } = useContext(ThemeContext);
+  const theme = {
+    light: {
+      backgroundColor: '#fff'
+    },
+    dark: {
+      backgroundColor: '#202225'
+    },
+  };
+
   return (
-    <div className="container">
+    <div className="container" style={theme[selectedTheme]}>
+      <Navbar />
       <Routes>
         <Route path="/" element={<SerraStorage />} />
         <Route path="students" element={<Students />} />
