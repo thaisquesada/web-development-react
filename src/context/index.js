@@ -6,7 +6,9 @@ export const ThemeContext = createContext();
 
 // provider = componente que ficará em volta do nosso App.js
 export const ThemeProvider = ({children}) => {
-    const [selectedTheme, setSelectedTheme] = useState("light");
+    const [selectedTheme, setSelectedTheme] = useState(
+        localStorage.getItem('selectedTheme')
+    );
 
     return (
         <ThemeContext.Provider value={{

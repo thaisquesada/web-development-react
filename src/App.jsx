@@ -12,10 +12,12 @@ function App() {
   const { selectedTheme } = useContext(ThemeContext);
   const theme = {
     light: {
-      backgroundColor: '#fff'
+      backgroundColor: '#fff',
+      color: "#202225"
     },
     dark: {
-      backgroundColor: '#202225'
+      backgroundColor: '#202225',
+      color: "#fff"
     },
   };
 

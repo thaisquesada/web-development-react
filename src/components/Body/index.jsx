@@ -3,8 +3,12 @@ import Form from "../Form";
 import List from "../List";
 import ProductList from "../ProductList";
 import Product from "../Product";
+import { ThemeContext } from "../../context";
+import { useContext } from "react";
 
 function Body() {
+  const { selectedTheme } = useContext(ThemeContext);
+
   const products = [
     {
       prodName: "Avocado",
@@ -22,17 +26,28 @@ function Body() {
       image: "https://nissei.com/media/catalog/product/cache/16a9529cefd63504739dab4fc3414065/x/b/xbox_one_series_x_perfil_-1_1.jpg"
     }
   ];
-      
+
+  const theme = {
+    light: {
+      backgroundColor: '#91a6fe',
+      color: '#fff'
+    },
+    dark: {
+      backgroundColor: '#91a6fe',
+      color: '#202225'
+    },
+  };
+
   return (
     <div>
       <Counter /> 
       <Form />
-      <List>
+      <ul style={theme[selectedTheme]}>
         <List.Item content="Paraguai" />
         <List.Item content="Uruguai" />
         <List.Item content="Argentina" />
         <List.Item content="Venezuela" />
-      </List>
+      </ul>
 
       <ProductList>
         {

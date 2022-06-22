@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const Title = styled.h3`
   font-size: 30px;
   font-family: sans-serif;
-  color: #525252;
 `;
 
 export const Button = styled.button`

@@ -13,11 +13,9 @@ const Navbar = () => {
     const { selectedTheme, setSelectedTheme } = useContext(ThemeContext);
 
     const darkMode = () => {
-        if (selectedTheme === "light") {
-            setSelectedTheme("dark")
-        } else {
-            setSelectedTheme("light")
-        }
+      const auxTheme = selectedTheme === "light" ? "dark" : "light";
+      localStorage.setItem("selectedTheme", auxTheme);
+      setSelectedTheme(auxTheme);
     }
 
     return (
